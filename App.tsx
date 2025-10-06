@@ -1,7 +1,7 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Image, ImageBackground } from 'expo-image'
-import { useFonts } from "expo-font"; 
+import { useFonts } from "expo-font";
 
 
 export default function App() {
