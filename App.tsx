@@ -1,13 +1,25 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, useColorScheme, View } from 'react-native'
 import React from 'react'
 import { Image, ImageBackground } from 'expo-image'
 import { useFonts } from "expo-font";
+import { TEMA_CLARO, TEMA_OSCURO } from './themes/Temas';
+
 
 
 export default function App() {
 const COLOR_FONDO="#121212"
 const COLOR_TITULO="#ffdd99"
 const COLOR_TEXTO_FOTO="#ffffff"
+
+const temaActivo= useColorScheme();
+
+  const tema=TEMA_CLARO
+
+  if(temaActivo==="dark"){
+    const tema=TEMA_OSCURO  
+  }else{
+    const tema=TEMA_CLARO
+  }
 
 useFonts({
     "bebasnue":require("./assets/BebasNeue-Regular.ttf")
@@ -102,12 +114,12 @@ const styles = StyleSheet.create({
     fontSize: 48,               
     shadowColor: "#000",
     shadowOffset: {
-      width: 0,
-	    height: 4,
+	    width: 0,
+	    height: 2,
     },
-    shadowOpacity: 0.32,
-    shadowRadius: 5.46,
-    elevation:5
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   contenedorFotosAlojamiento:{
     flex:1,
