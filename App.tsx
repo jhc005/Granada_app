@@ -42,6 +42,21 @@ useFonts({
             source={require("./assets/mejores3.jpg")}>
             <Text style={[styles.textoFoto,{color:COLOR_TEXTO_FOTO}]} >El centro</Text>
           </ImageBackground>
+          <Text style={[styles.titulo,{color:COLOR_TITULO}]}>Los mejores alojamientos</Text>
+          <View style={styles.contenedorFotosAlojamiento}>
+            <View style={styles.contenedorAlojamiento}>
+              <Image style={styles.fotoAlojamiento} contentFit='fill' source={require("./assets/alojamiento1.jpg")}/>
+            </View>
+            <View style={styles.contenedorAlojamiento}>
+              <Image style={styles.fotoAlojamiento} contentFit='fill' source={require("./assets/alojamiento2.jpg")}/>
+            </View>
+            <View style={styles.contenedorAlojamiento}>
+              <Image style={styles.fotoAlojamiento} contentFit='fill' source={require("./assets/alojamiento3.jpg")}/>
+            </View>
+            <View style={styles.contenedorAlojamiento}>
+              <Image style={styles.fotoAlojamiento} contentFit='fill' source={require("./assets/alojamiento4.jpg")}/>
+            </View>
+          </View>
         </View>
       </ScrollView>
     </View>
@@ -93,5 +108,20 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.32,
     shadowRadius: 5.46,
     elevation:5
+  },
+  contenedorFotosAlojamiento:{
+    flex:1,
+    flexDirection:"row",
+    flexWrap:"wrap",
+    gap:5,
+    marginBottom:15
+  },
+  fotoAlojamiento:{
+    width:"100%",
+    height:"100%",
+  },
+  contenedorAlojamiento:{
+    width:"49%",
+    aspectRatio:1
   }
 })
